@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
+    <link rel="import" href="bower_components/core-item/core-item.html">
+    <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <style>
+
+    </style>
+</head>
+<body unresolved>
+<core-scaffold>
+    <core-header-panel navigation flex mode="seamed">
+        <core-toolbar id="core_toolbar">Navigation</core-toolbar>
+        <core-menu theme="core-light-theme">
+            <core-item icon="home" label="Home"><a href="index.html"></a></core-item>
+            <core-item icon="star" label="Goals"><a href="goals.html"></a></core-item>
+            <core-item icon="announcement" label="Alerts"><a href="alerts.html"></a></core-item>
+            <core-item icon="settings" label="Settings"><a href="settings.html"></a></core-item>
+            <core-item src="logout-icon.png" label="Logout" onclick="logout()"></core-item>
+        </core-menu>
+    </core-header-panel>
+    <table width="100%" tool><tr>
+        <td id="title" tool>Settings</td>
+        <td id="logo" tool><img src="logo.png"/></td>
+    </tr></table>
+    <core-card id="core_card" vertical layout start>
+        <div id="settings" style="padding: 20px 5px;">
+
+            <div id="reset-notice">Change Your Password</div>
+
+            <table>
+                <tr>
+                    <td>Current password:</td>
+                    <td><input type="password" id="current_pass"></td>
+                </tr>
+                <tr>
+                    <td>Enter new password:</td>
+                    <td><input type="password" id="resetpass1"></td>
+                </tr>
+                <tr>
+                    <td>Confirm new password:</td>
+                    <td><input type="password" id="resetpass2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><center><input type="submit" value="RESET PASSWORD" id="confirm_reset" onclick="updatePassword()"></center></td>
+                </tr>
+
+        </div>
+    </core-card>
+    <!--<paper-toast id="toast1" text="Monifest!"></paper-toast>-->
+</core-scaffold>
+<!--<paper-fab icon="add" onclick="document.querySelector('#toast1').show()"></paper-fab>-->
+</body>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/parse-1.5.0.min.js"></script>
+<script src="js/main-parse.js"></script>
+<script src="js/buttons.js"></script>
+</html>

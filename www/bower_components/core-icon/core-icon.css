@@ -1,0 +1,52 @@
+/* Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt */
+
+html /deep/ core-icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  fill: currentcolor;
+  position: relative;
+  /*height: 24px;
+  width: 24px;*/
+  height: 7.06vw;
+  width: 7.06vw;
+}
+
+core-scaffold::shadow core-header-panel core-toolbar core-icon-button::shadow core-icon {
+  height: /*50px */ 14.71vw;
+  width: /*50px */ 14.71vw;
+  display: inline-block;
+}
+
+/*core-scaffold::shadow core-header-panel core-menu core-item::shadow core-icon {
+  height: 7.06vw;
+  width: 7.06vw;
+}*/
+
+#goals paper-fab::shadow core-icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  fill: currentcolor;
+  position: relative;
+  height: 7.06vw;
+  width: 7.06vw;
+}
+
+#home paper-button core-icon {
+  height: /*84px*/ 24.69vw;
+  width: /*84px*/ 24.69vw;
+  border-radius: 100%;
+}
+
+#home paper-fab::shadow core-icon {
+  height: 24.69vw;
+  width: 24.69vw;
+  margin-top: -2.345vw;
+  margin-left: -2.345vw;
+}

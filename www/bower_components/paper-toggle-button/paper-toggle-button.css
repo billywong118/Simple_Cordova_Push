@@ -1,0 +1,95 @@
+/*
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+*/
+
+:host {
+  display: inline-block;
+}
+
+:host(:focus) {
+  outline: none;
+}
+
+/* Class selectors can be overridden by users. */
+
+.toggle-bar {
+  background-color: #f1f1f1;
+}
+
+.toggle-button {
+  background-color: #f1f1f1;
+}
+
+[checked] .toggle {
+  background-color: #007f4c;
+}
+
+.toggle-ink {
+  color: #bbb;
+}
+
+[checked] .toggle-ink {
+  color: #0f9d58;
+}
+
+/* ID selectors should not be overriden by users. */
+
+#toggleContainer {
+  position: relative;
+  width: 36px/*10.59vw*/;
+  height: 14px/*4.12vw*/;
+}
+
+#toggleContainer[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+#toggleBar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px/*2.35vw*/;
+  pointer-events: none;
+  opacity: 0.26;
+  transition: background-color linear .08s;
+}
+
+[checked] #toggleBar {
+  opacity: 0.5;
+}
+
+#toggleButton {
+  position: absolute;
+  top: -3px/*-0.882vw*/;
+  height: 20px/*5.882vw*/;
+  width: 20px/*5.882vw*/;
+  border-radius: 50%;
+  box-shadow: 0 1px/*0.294vw*/ 5px/*1.47vw*/ 0 rgba(0, 0, 0, 0.4);
+  transition: -webkit-transform linear .08s, background-color linear .08s;
+  transition: transform linear .08s, background-color linear .08s;
+}
+
+#toggleButton.dragging {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[checked] #toggleButton {
+  -webkit-transform: translate(16px/*4.71vw*/, 0);
+  transform: translate(16px/*4.71vw*/, 0);
+}
+
+#ink {
+  position: absolute;
+  top: -14px/*-4.12vw*/;
+  left: -14px/*-4.12vw*/;
+  width: 48px/*14.117vw*/;
+  height: 48px/*14.117vw*/;
+  pointer-events: none;
+}

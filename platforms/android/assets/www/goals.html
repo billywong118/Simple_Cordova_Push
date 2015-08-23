@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <title>Goals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
+    <link rel="import" href="bower_components/core-item/core-item.html">
+    <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <style>
+        paper-fab {
+            right: 0px;
+            bottom: 0px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body unresolved onload="setToday(); get_goals();">
+<core-scaffold>
+    <core-header-panel navigation flex mode="seamed">
+        <core-toolbar id="core_toolbar">Navigation</core-toolbar>
+        <core-menu theme="core-light-theme">
+            <core-item icon="home" label="Home"><a href="index.html"></a></core-item>
+            <core-item icon="star" label="Goals"><a href="goals.html"></a></core-item>
+            <core-item icon="announcement" label="Alerts"><a href="alerts.html"></a></core-item>
+            <core-item icon="settings" label="Settings"><a href="settings.html"></a></core-item>
+            <core-item src="logout-icon.png" label="Logout" onclick="logout()"></core-item>
+        </core-menu>
+    </core-header-panel>
+    <table width="100%" tool><tr>
+        <td id="title" tool>Goals</td>
+        <td id="logo" tool><img src="logo.png"/></td>
+    </tr></table>
+    <core-card id="core_card" vertical layout start>
+        <div id="goals" style="padding: 20px 5px;">
+
+            <!--<button type="button" id="create-goal" onclick="window.location.href='create-goal.html'">CREATE A GOAL</button>-->
+            <paper-button id="create-a-goal" onclick="window.location.href='create-goal.html'">CREATE A GOAL</paper-button>
+
+
+            </br>
+
+            <div id="month" align="center">
+            </div>
+            <table id="calendar">
+                <tr>
+                    <td>Su</td>
+                    <td>Mo</td>
+                    <td>Tu</td>
+                    <td>We</td>
+                    <td>Th</td>
+                    <td>Fr</td>
+                    <td>Sa</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="check-width"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="next-week"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+
+            <table id="current_goals">
+                <tr>
+                    <td>
+                        <div id="current-goals_label">
+                            <b><center>Current Goals</center></b>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </core-card>
+    <!--<paper-toast id="toast1" text="Monifest!"></paper-toast>-->
+</core-scaffold>
+<!--<paper-fab icon="add" onclick="document.querySelector('#toast1').show()"></paper-fab>-->
+</body>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/parse-1.5.0.min.js"></script>
+<script src="js/main-parse.js"></script>
+<script src="js/buttons.js"></script>
+<script src="js/calendar.js"></script>
+</html>
